@@ -1,68 +1,59 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Comparison of three computers</title>
     <meta charset="utf-8" />
-</head>
-<body>
-<p>A comparison of technical data of three popular 80's home computers:</p>
-<style type="text/css">
-table {
-  width: 400px;
-}
+    <link href="style.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+    <p>A comparison of technical data of three popular 80's home computers:</p>
+    <table>
+      <caption>Technical comparison</caption>
+      <thead>
+        <tr id="toprow">
+          <th>Property</th>
+          <th>Commodore 64</th>
+          <th>ZX Spectrum</th>
+          <th>Commodore VIC-20</th>
+          <th>Spectravideo SV-328</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>CPU</td>
+          <td>MOS Technology 6510</td>
+          <td>Zilog Z80</td>
+          <td>MOS Technology 6502</td>
+          <td>Zolog Z80A</td>
+        </tr>
+        <tr>
+          <td>RAM</td>
+          <td>64 kilobytes</td>
+          <td>16 or 64 kilobytes</td>
+          <td>5 kilobytes</td>
+          <td>64 kilobytes</td>
+        </tr>
+        <tr>
+          <td>ROM</td>
+          <td>20 kilobytes</td>
+          <td>16 kilobytes</td>
+          <td>16 kilobytes</td>
+          <td>32 kilobytes</td>
+        </tr>
+        <tr>
+          <td>Main usage</td>
+          <td colspan="4" id="usage">home computing</td>
+        </tr>
+        <tr>
+          <td>Killer game</td>
+          <td colspan="2">Jet Set Willy</td>
+          <td>Jelly Monsters</td>
+          <td>Armored Assault</td>
+        </tr>
+      </tbody>
+    </table>
 
-table, th, td {
-  border: 1px solid black;
-  text-align: center;
-}
-</style>
-<table>
-    <caption>Technical comparison</caption>
-    <thead>
-    <tr>
-        <th>Property</th>
-        <th>Commodore 64</th>
-        <th>ZX Spectrum</th>
-        <th>Commodore VIC-20</th>
-        <th>Spectravideo SV-328</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td>CPU</td>
-        <td>MOS Technology 6510</td>
-        <td>Zilog Z80</td>
-        <td>MOS Technology 6502</td>
-        <td>Zolog Z80A</td>
-    </tr>
-    <tr>
-        <td>RAM</td>
-        <td>64 kilobytes</td>
-        <td>16 or 64 kilobytes</td>
-        <td>5 kilobytes</td>
-        <td>64 kilobytes</td>
-    </tr>
-    <tr>
-        <td>ROM</td>
-        <td>20 kilobytes</td>
-        <td>16 kilobytes</td>
-        <td>16 kilobytes</td>
-        <td>32 kilobytes</td>
-    </tr>
-    <tr>
-      <td>Main usage</td>
-      <td colspan="4">home computing</td>
-    </tr>
-    <tr>
-      <td>Killer game</td>
-      <td colspan="2">Jet Set Willy</td>
-      <td>Jelly Monsters</td>
-      <td>Armored Assault</td>
-    </tr>
-    </tbody>
-</table>
-    
-<hr/>
-    
-</body>
+    <hr/>
+
+  </body>
 </html>

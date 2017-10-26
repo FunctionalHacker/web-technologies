@@ -1,0 +1,51 @@
+body {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto
+}
+
+h1 {
+  font-size: 80px;
+  font-weight: normal;
+  line-height: 1;
+}
+
+h2 {
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 0px;
+}
+
+figcaption {
+  font-weight: bold;
+  font-size: smaller;
+}
+
+p {
+  font-style: italic;
+  line-height: 0px;
+}
+
+.box {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 10px;
+  max-width: 250px;
+  margin: auto;
+  margin-bottom: 0em;
+}
+
+#blueberry {
+  background-color: #C6D9F1
+}
+
+#cloudberry {
+  background-color: #FDE9D9;
+  border-bottom: none;
+  border-top: none;
+}
+
+#lingonberry {
+  background-color: #D99594
+}

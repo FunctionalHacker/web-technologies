@@ -1,0 +1,32 @@
+#toprow {
+  color: white;
+  background: red;
+}
+
+caption {
+  text-transform: uppercase;
+  border-top: 1px black solid;
+  border-right: 1px grey solid;
+  border-left: 1px grey solid;
+
+}
+
+#usage {
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background: #e6e6e6
+}
+
+table {
+    border-style: solid;
+    border-width: 1px;
+    border-collapse: collapse;
+}
+
+
+table td:first-child {
+    font-weight: bold;
+    border-right: 1px black solid;
+}
