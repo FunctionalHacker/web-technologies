@@ -1,0 +1,51 @@
+body {
+  font-family: "Raleway", sans-serif;
+  line-height: 1.2;
+}
+
+p {
+  max-width: 300px;
+  display: inline-block;
+}
+
+table {
+  width: 400px;
+}
+
+table, th, td {
+  border: 1px solid black;
+  text-align: center;
+}
+
+#content {
+  position: relative;
+}
+
+#content img {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+#content h3 {
+  margin: 0px 00px 0px 0px;
+
+}
+
+#courses {
+  padding: 0px 0px 20px 0px;
+}
+
+a:link, a:visited {
+  background-color: #0099ff;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  width: 150px;
+}
+
+a:hover, a:active {
+  background-color: #0033cc;
+}
