@@ -14,15 +14,15 @@ function addTask() {
 
     // Reference to where the output goes:
     var output = document.getElementById('output');
-    
+
     // For the output:
     var message = '';
 
     if (task.value) {
-    
+
         // Add the item to the array:
         tasks.push(task.value);
-        
+
         // Update the page:
         message = '<h2>To-Do</h2><ol>';
         for (var i = 0, count = tasks.length; i < count; i++) {
@@ -30,12 +30,12 @@ function addTask() {
         }
         message += '</ol>';
         output.innerHTML = message;
-        
+
     } // End of task.value IF.
 
     // Return false to prevent submission:
     return false;
-    
+
 } // End of addTask() function.
 
 // Initial setup:
@@ -44,3 +44,13 @@ function init() {
     document.getElementById('theForm').onsubmit = addTask;
 } // End of init() function.
 window.onload = init;
+
+function removeDuplicates() {
+    var tmp = [];
+    for(var i = 0; i < tasks.length; i++){
+        if(tmp.indexOf(tasks[i]) == -1){
+            tmp.push(tasks[i]);
+        }
+    }
+    tasks = tmp;
+}

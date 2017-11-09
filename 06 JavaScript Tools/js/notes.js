@@ -8,7 +8,13 @@ function addItem() {
     textbox.value = '';
     textbox.focus();
     var newItem = {title: itemText, quantity: 1};
-    notes.push(newItem);
+    var noteIndex = notes.findIndex(i => i.itemText == itemText);
+    console.log(noteIndex);
+    if (noteIndex == -1){
+        notes.quantity[noteIndex]++; 
+    } else {
+        notes.push(newItem);
+    }
     displayList();
     saveList();
 }
@@ -30,6 +36,7 @@ function deleteIndex(i) {
     notes.splice(i, 1);
     displayList();
 }
+
 function saveList() {
     localStorage.notes = JSON.stringify(notes);
 }
