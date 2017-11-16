@@ -1,25 +1,68 @@
 <!doctype html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title> JSON </title>
-  <script>
-
+  <head>
+    <meta charset="utf-8">
+    <title> JSON </title>
+    <style type="text/css">
+div {
+  border: 1px solid red;
+}
+    </style>
+    <script>
+      window.onload = init;
 var fidoString = '{ "name": "Fido", "breed": "Mixed", "weight": 38 }';
 var fido = JSON.parse(fidoString);
 console.log("We have made a dog out of a string! " + fido.name);
 
 
 var fido2 = {
-	name: "Fido",
-	breed: "Mixed",
-	weight: 38
+  name: "Fido",
+  breed: "Mixed",
+  weight: 38
 };
 var fidoString = JSON.stringify(fido2);
 console.log("We made a string from a dog! " + fidoString);
 
-  </script>
-</head>
-<body>
-</body>
+var employee = {
+  name: { first: "Colin",
+    second: "Stephen" },
+  title: "Assistant Lecturer"
+};
+
+function init(){
+  var div1 = document.getElementById("div1");
+  var div2 = document.getElementById("div2");
+  div1.appendChild(p1);
+  div2.appendChild(p2);
+}
+
+var myString = JSON.stringify(employee);
+var employee2 = JSON.parse(myString);
+var employeeFname = employee2.name.first;
+var employeeLname = employee2.name.second;
+var employeeTitle = employee2.title;
+
+var name1 = document.createTextNode("First name: "+employeeFname);
+var name2 = document.createTextNode("Last name: "+employeeLname);
+var title = document.createTextNode("Title: "+employeeTitle);
+var p1 = document.createElement("p");
+var t1 = document.createTextNode("JSON string: "+myString);
+p1.appendChild(t1);
+
+var p2 = document.createElement("p");
+var linebreak = document.createElement("br");
+p2.appendChild(name1);
+p2.appendChild(linebreak);
+
+p2.appendChild(name2);
+var linebreak = document.createElement("br");
+p2.appendChild(linebreak);
+
+p2.appendChild(title);
+    </script>
+  </head>
+  <body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+  </body>
 </html>

@@ -46,11 +46,26 @@ function init() {
 window.onload = init;
 
 function removeDuplicates() {
-    var tmp = [];
-    for(var i = 0; i < tasks.length; i++){
-        if(tmp.indexOf(tasks[i]) == -1){
-            tmp.push(tasks[i]);
+    'use strict';
+    console.log("test");
+    for (var i=0; i<=tasks.length; i++){
+        var duplicate= tasks[i];
+
+        for (var y=0; y<tasks.length; y++){
+            var duplicates = tasks[y];
+
+            if(duplicate == duplicates && i != y){
+                tasks.splice(y,1);
+                console.log("duplicate(s) removed");
+            }
         }
     }
-    tasks = tmp;
+    var output = document.getElementById('output');
+    var message = '';
+    message = '<h2>To-Do</h2><ol>';
+    for (var x = 0, count = tasks.length; x < count; x++) {
+        message += '<li>' + tasks[x] + '</li>';
+    }
+    message += '</ol>';
+    output.innerHTML = message;
 }

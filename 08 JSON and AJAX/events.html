@@ -28,10 +28,18 @@ function handleClick(e) {
 	}
 	alert("You clicked on " + target.id);
 }
+function handleMouseOver() {
+  alert("Your mouse is over the paragraph");
+}
 
   </script>
 </head>
 <body>
 <span id="clickme">Click me!</span>
+
+<div id="onmouseover" onmouseover="handleMouseOver()">
+  <p>This is a paragraph</p>
+</div>
+
 </body>
 </html>
