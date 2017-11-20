@@ -1,52 +1,80 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Click me!</title>
-<style> 
-	body, button { margin: 10px; } 
-	div { padding: 10px; }
-</style>
-<script>
+  <head>
+    <meta charset="utf-8">
+    <title>Click me!</title>
+    <style> 
+body, button { margin: 10px; } 
+div { padding: 10px; }
+    </style>
+    <script>
 
-/*
-//
-// The version without the closure...
-//
-var count = 0;
+      /*
+      //
+      // The version without the closure...
+      //
+      var count = 0;
 window.onload = function() {
-	var button = document.getElementById("clickme");
-	button.onclick = handleClick;
+    var button = document.getElementById("clickme");
+    button.onclick = handleClick;
 };
 
 function handleClick() {
-	var message = "You clicked me ";
-	var div = document.getElementById("message");
-	count++;
-	div.innerHTML = message + count + " times!";
+    var message = "You clicked me ";
+    var div = document.getElementById("message");
+    count++;
+    div.innerHTML = message + count + " times!";
 }
-*/
+       */
 
 //
 // The version with the closure.
 //
 window.onload = function() {
-	var count = 0; 
-	var message = "You clicked me ";
-	var div = document.getElementById("message");
+  var count = 0; 
+  var message = "You clicked me ";
+  var div = document.getElementById("message");
 
-	var button = document.getElementById("clickme");
-	button.onclick = function() {
-		count++;
-		div.innerHTML = message + count + " times!";
-	};
+  var button = document.getElementById("clickme");
+  button.onclick = function() {
+    count++;
+    div.innerHTML = message + count + " times!";
+  };
 };
+var speed = 0;
 
-</script> 
-</head> 
-<body>
-	<button id="clickme">Click me!</button>
-	<div id="message"></div>
-</body>
+function updateSpeed(newSpeed) {
+  var playbackSpeed = document.getElementById("playback-speed");
+  playbackSpeed.innerHTML = "Playback speed: " + newSpeed;
+}
+window.onload = function() {
+  updateSpeed(speed);
+  var plus = document.getElementById("plus");
+  var zero = document.getElementById("zero");
+  var minus = document.getElementById("minus");
+  
+  plus.onclick = function() {
+    speed++;
+    updateSpeed(speed);
+  };
+  minus.onclick = function() {
+    speed--;
+    updateSpeed(speed);
+  };
+  zero.onclick = function() {
+    speed = 0;
+    updateSpeed(speed);
+  };
+};
+    </script> 
+  </head> 
+  <body>
+    <button id="clickme">Click me!</button>
+    <div id="message"></div>
+    <button id="minus">-</button>
+    <button id="zero">0</button>
+    <button id="plus">+</button>
+    <div id="playback-speed"></div>
+  </body>
 </html>
 
